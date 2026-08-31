@@ -1,0 +1,59 @@
+/**
+ * About / À Propos Section Component
+ */
+
+.propos {
+  padding-block: clamp(70px, 12vh, 150px);
+  border-top: 1px solid var(--line);
+}
+
+.propos__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(28px, 6vw, 90px);
+  align-items: center;
+}
+
+.propos h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+.propos h2 em {
+  color: var(--matcha-ink);
+}
+
+.propos p {
+  margin: 0 0 20px;
+  color: var(--ink-2);
+  max-width: 52ch;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 22px;
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.specs dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.specs dd {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .propos__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,100 @@
+/**
+ * Animations, Reveal Effects & Accessibility Queries
+ */
+
+/* Scroll Reveal States */
+.rv {
+  opacity: 0;
+  transform: translateY(26px);
+  will-change: opacity, transform;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.rv-d1.in {
+  transition-delay: .08s;
+}
+
+.rv-d2.in {
+  transition-delay: .16s;
+}
+
+.rv-d3.in {
+  transition-delay: .24s;
+}
+
+/* Reduced Motion Support (WCAG 2.2.2 & 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero__sticky {
+    position: static;
+    height: auto;
+    overflow: visible;
+    display: block;
+    padding: 120px 0 60px;
+  }
+
+  .hero__medallion {
+    position: relative;
+    top: auto;
+    left: auto;
+    translate: none;
+    margin: 38px auto;
+    width: min(78vw, 360px);
+  }
+
+  .hero__act--2 {
+    position: static;
+    opacity: 1;
+    color: var(--ink);
+    padding: 34px 0 0;
+  }
+
+  .hero__act--2 h2 {
+    text-shadow: none;
+  }
+
+  .hero__act--2 h2 em {
+    color: var(--matcha-ink);
+  }
+
+  .hero__act--2 .meta {
+    color: var(--ink-2);
+  }
+
+  .hero__act--2 .arrow-link {
+    color: var(--matcha-ink);
+  }
+
+  .a2foot p {
+    color: var(--ink-2);
+  }
+
+  .hero__h1 .l2 {
+    margin-top: 24px;
+  }
+}

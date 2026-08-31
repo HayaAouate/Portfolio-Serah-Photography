@@ -1,0 +1,202 @@
+/**
+ * Hero Component — Sticky Medallion Morph
+ */
+
+.hero {
+  position: relative;
+  height: 230vh;
+}
+
+.hero__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.hero__medallion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(260px, 34vw, 500px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  overflow: hidden;
+  will-change: transform, border-radius;
+  box-shadow: 0 40px 90px -50px rgba(28, 32, 26, .55);
+}
+
+.hero__medallion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(180deg, rgba(20, 24, 18, .55) 0%, rgba(20, 24, 18, .12) 38%, rgba(20, 24, 18, .72) 100%);
+}
+
+.hero__act {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  padding-inline: var(--gut);
+  pointer-events: none;
+}
+
+.hero__act--1 {
+  display: grid;
+}
+
+.hero__pre {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.6rem, 3.6vw, 3rem);
+  color: var(--matcha-ink);
+  margin-left: clamp(0px, 3vw, 52px);
+}
+
+.hero__h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 13.5vw, 11.5rem);
+}
+
+.hero__h1 .l2 {
+  display: block;
+  text-align: right;
+  margin-top: clamp(76px, 17vh, 190px);
+}
+
+.hero__h1 .amp {
+  font-style: italic;
+  color: var(--matcha);
+  padding-right: .12em;
+}
+
+.hero__act--2 {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 3;
+  opacity: 0;
+  color: #F6F4EE;
+  padding-bottom: clamp(34px, 8vh, 86px);
+}
+
+.hero__act--2 .a2grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero__act--2 h2 {
+  margin: 0;
+  font-size: clamp(2.6rem, 8.4vw, 6.6rem);
+  text-shadow: 0 2px 40px rgba(15, 18, 12, .5);
+}
+
+.hero__act--2 h2 em {
+  color: #DCE4CE;
+}
+
+.a2foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 44px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.a2foot p {
+  margin: 0;
+  max-width: 38ch;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(246, 244, 238, .86);
+}
+
+.hero__act--2 .meta {
+  color: rgba(246, 244, 238, .72);
+}
+
+.hero__act--2 .arrow-link {
+  color: #F6F4EE;
+}
+
+.hero__aside {
+  position: absolute;
+  left: var(--gut);
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero__aside .v {
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.hero__aside .stem {
+  width: 1px;
+  height: 74px;
+  background: linear-gradient(var(--line), transparent);
+}
+
+.hero__year {
+  position: absolute;
+  right: var(--gut);
+  top: 24vh;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink-3);
+  opacity: .5;
+}
+
+@media (min-width: 981px) {
+  .hero__act {
+    padding-left: calc(var(--gut) + 58px);
+  }
+  .hero__act--2 {
+    padding-left: var(--gut);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero__aside,
+  .hero__year {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    height: 180vh;
+  }
+  .hero__h1 .l2 {
+    text-align: left;
+    margin-top: clamp(150px, 32vh, 260px);
+  }
+  .hero__medallion {
+    width: min(62vw, 300px);
+  }
+}

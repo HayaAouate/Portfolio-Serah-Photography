@@ -1,0 +1,20 @@
+# Service à ajouter au docker-compose.yaml du serveur (~/app/docker-compose.yaml).
+#
+# Caddy joint les services par leur nom sur le réseau Docker : c'est pour ça que
+# le Caddyfile écrit `reverse_proxy portfolio-serah:3004` et non une IP.
+# Le nom du réseau ci-dessous doit être CELUI QUE CADDY UTILISE DÉJÀ — vérifiez-le
+# avec :  docker network ls  puis  docker inspect <conteneur-caddy> | grep -i network
+
+services:
+  portfolio-serah:
+    image: miaouu/portfolio-serah:latest
+    container_name: portfolio-serah
+    restart: unless-stopped
+    expose:
+      - "3004"          # visible par Caddy sur le réseau, pas publié sur l'hôte
+    networks:
+      - web
+
+networks:
+  web:
+    external: true      # remplacer "web" par le réseau réel de Caddy

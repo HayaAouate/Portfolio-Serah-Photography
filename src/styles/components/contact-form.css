@@ -1,0 +1,187 @@
+/**
+ * Contact Form Modal
+ * Fenêtre de demande de shooting : nom, e-mail, type, période, message
+ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+  background: rgba(20, 24, 18, .55);
+  padding: clamp(0px, 4vw, 40px);
+  overflow-y: auto;
+}
+
+.modal.is-on {
+  display: grid;
+  place-items: center;
+}
+
+.modal__panel {
+  width: min(100%, 620px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 4vw, 44px);
+  position: relative;
+}
+
+.modal__panel h2 {
+  margin: 0 0 6px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.modal__panel h2 em {
+  color: var(--matcha-ink);
+}
+
+.modal__intro {
+  margin: 0 0 26px;
+  color: var(--ink-2);
+  font-size: 15px;
+  max-width: 46ch;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ---------- champs ---------- */
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.form__row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 560px) {
+  .form__row2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.field .req {
+  color: var(--matcha-ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 13px 14px;
+  width: 100%;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.field textarea {
+  min-height: 118px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--ink-2) 50%),
+    linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
+  background-position: calc(100% - 19px) 22px, calc(100% - 14px) 22px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--matcha-ink);
+  outline-offset: 1px;
+  background: var(--paper);
+  border-color: var(--matcha);
+}
+
+.field .err {
+  margin: 0;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.field.has-err input,
+.field.has-err select,
+.field.has-err textarea {
+  border-color: var(--danger);
+}
+
+/* ---------- pied de formulaire ---------- */
+
+.form__foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.form__note {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  max-width: 30ch;
+}
+
+.form__status {
+  margin: 0;
+  font-size: 14.5px;
+  padding: 14px 16px;
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  color: var(--ink-2);
+}
+
+.form__status.is-ok {
+  border-color: var(--matcha);
+  color: var(--matcha-ink);
+}
+
+.form__status.is-ko {
+  border-color: var(--danger);
+  color: var(--danger);
+}

@@ -1,0 +1,482 @@
+<title>Serah Aouate — Note de cadrage</title>
+<style>
+  :root{
+    --bg:#0d0d0f;
+    --surface:#17171a;
+    --surface-2:#1f1f23;
+    --text:#f4f2ec;
+    --text-muted:#8f8c86;
+    --accent:#c9a35c;
+    --accent-soft:#c9a35c26;
+    --line:#29282c;
+    --display: "Big Caslon", "Bodoni MT", Didot, Constantia, Cambria, Georgia, ui-serif, serif;
+    --sans: -apple-system, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "IBM Plex Mono", Consolas, monospace;
+  }
+  :root[data-theme="light"]{
+    --bg:#ece9e2;
+    --surface:#f8f6f1;
+    --surface-2:#e1ddd3;
+    --text:#1c1a16;
+    --text-muted:#75705f;
+    --accent:#8a6a34;
+    --accent-soft:#8a6a3422;
+    --line:#d8d3c6;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#ece9e2;
+      --surface:#f8f6f1;
+      --surface-2:#e1ddd3;
+      --text:#1c1a16;
+      --text-muted:#75705f;
+      --accent:#8a6a34;
+      --accent-soft:#8a6a3422;
+      --line:#d8d3c6;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:64px 28px 120px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  header.masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    padding-bottom:28px;
+    margin-bottom:44px;
+    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  header.masthead h1{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:clamp(28px,4.5vw,40px);
+    letter-spacing:-0.02em;
+    margin:6px 0 0;
+    text-wrap:balance;
+  }
+  header.masthead .meta{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-muted);
+    text-align:right;
+    line-height:1.8;
+  }
+  section.block{margin-bottom:72px;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:22px;
+  }
+  .section-num{
+    font-family:var(--mono);
+    color:var(--accent);
+    font-size:14px;
+  }
+  h2{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:26px;
+    letter-spacing:-0.01em;
+    margin:0;
+    text-wrap:balance;
+  }
+  h3{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:16px;
+    margin:0 0 10px;
+    color:var(--text);
+  }
+  p{margin:0 0 16px;color:var(--text);}
+  p.lede{font-size:18px;color:var(--text-muted);}
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:24px 0 28px;
+    border-radius:4px;
+    overflow:hidden;
+  }
+  .stat{
+    background:var(--surface);
+    padding:18px 16px;
+  }
+  .stat .num{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:24px;
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+  }
+  .stat .label{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-top:4px;
+  }
+  .callout{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:4px;
+    padding:18px 20px;
+    margin:20px 0;
+  }
+  .callout p:last-child{margin-bottom:0;}
+  ul.trend-list{margin:0 0 20px;padding:0;list-style:none;}
+  ul.trend-list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:16px;
+  }
+  ul.trend-list li:last-child{border-bottom:none;}
+  ul.trend-list .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--text-muted);
+    padding-top:2px;
+  }
+  ul.trend-list p{margin:0;font-size:15.5px;}
+
+  /* sitemap */
+  .sitemap{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:24px 24px 20px;
+    margin:24px 0 28px;
+    font-family:var(--mono);
+    font-size:13.5px;
+  }
+  .sitemap .node{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:7px 0;
+  }
+  .sitemap .node.l1{color:var(--text);font-weight:600;}
+  .sitemap .node.l2{color:var(--text-muted);padding-left:24px;}
+  .sitemap .node.l2::before{content:"—";color:var(--accent);}
+  .sitemap .pill{
+    font-size:10px;
+    padding:2px 7px;
+    border-radius:20px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+
+  /* visual direction */
+  .swatches{display:flex;gap:10px;margin:20px 0 28px;flex-wrap:wrap;}
+  .swatch{
+    width:92px;
+  }
+  .swatch .chip{
+    height:64px;
+    border-radius:6px;
+    border:1px solid var(--line);
+  }
+  .swatch .name{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--text-muted);
+    margin-top:6px;
+  }
+  .type-sample{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 24px;
+    margin:20px 0 28px;
+  }
+  .type-sample .disp{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:30px;
+    letter-spacing:-0.02em;
+    margin-bottom:10px;
+  }
+  .type-sample .body-sample{
+    font-family:var(--sans);
+    color:var(--text-muted);
+    font-size:15px;
+    max-width:60ch;
+  }
+  .type-sample .disp em{font-style:italic;font-weight:400;}
+  .type-sample .cap{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-top:14px;
+  }
+
+  .hero-mock{
+    position:relative;
+    background:#0d0d0f;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:20px 22px 26px;
+    margin:20px 0 10px;
+    overflow:hidden;
+    min-height:280px;
+  }
+  .hero-mock__nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#c9c6bd;
+  }
+  .hero-mock__nav .brand{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:15px;
+    letter-spacing:0;
+    text-transform:none;
+    color:#f4f2ec;
+  }
+  .hero-mock__portal{
+    width:150px;height:150px;
+    border-radius:50%;
+    margin:18px auto 0;
+    background:
+      radial-gradient(circle at 38% 82%, rgba(20,16,10,.55), transparent 55%),
+      linear-gradient(160deg,#e9c876,#c99a4a 40%,#7c5a2c 75%,#3a2a17);
+    border:1px solid #3a362c;
+    position:relative;
+  }
+  .hero-mock__title{
+    text-align:center;
+    font-family:var(--display);
+    color:#f4f2ec;
+    font-size:30px;
+    line-height:1.1;
+    margin-top:-34px;
+    text-shadow:0 2px 18px rgba(0,0,0,.6);
+  }
+  .hero-mock__title .it{font-style:italic;font-weight:400;}
+  .hero-mock__cta{
+    text-align:center;
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-top:16px;
+  }
+  .mood-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin:20px 0 8px;
+  }
+  .mood-chip{
+    height:92px;
+    border-radius:4px;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .mood-chip span{
+    font-family:var(--sans);
+    font-size:9.5px;
+    color:#fff;
+    padding:7px 8px;
+    letter-spacing:.02em;
+    text-shadow:0 1px 6px rgba(0,0,0,.7);
+  }
+  .mood-chip.m1{background:linear-gradient(155deg,#e9c876,#a9762f 55%,#4a3419);}
+  .mood-chip.m2{background:linear-gradient(155deg,#123b47,#1c6b7a 55%,#0a2226);}
+  .mood-chip.m3{background:linear-gradient(155deg,#5c2148,#a83f7a 55%,#2a0f24);}
+  .mood-chip.m4{background:linear-gradient(155deg,#d8c27a,#8a7a3a 55%,#2f2a12);}
+  .caption{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-muted);
+    margin-bottom:28px;
+  }
+
+  .next-steps{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px 24px;
+  }
+  .next-steps ol{margin:0;padding-left:20px;}
+  .next-steps li{margin-bottom:10px;font-size:15.5px;}
+  .next-steps li:last-child{margin-bottom:0;}
+
+  footer{
+    margin-top:56px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-muted);
+  }
+  footer a{color:var(--accent);}
+
+  @media (max-width:520px){
+    ul.trend-list li{grid-template-columns:1fr;gap:4px;}
+    .mood-row{grid-template-columns:1fr 1fr;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <div class="eyebrow">Note de cadrage — Portfolio photo</div>
+      <h1>Serah Aouate</h1>
+    </div>
+    <div class="meta">
+      05 août 2026<br>
+      serah-photos.tracevault.tech<br>
+      v2 — direction visuelle revue
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="section-head"><span class="section-num">01</span><h2>Marché &amp; tendances</h2></div>
+    <p class="lede">Le marché français de la photographie est en croissance mais saturé de généralistes. La différenciation se joue sur la spécialisation et sur la vitrine en ligne.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">1,7 Md€</div><div class="label">Marché FR 2025</div></div>
+      <div class="stat"><div class="num">+40%</div><div class="label">Depuis 2020</div></div>
+      <div class="stat"><div class="num">80–300€</div><div class="label">Tarif horaire pro</div></div>
+      <div class="stat"><div class="num">40 / 30 / 20%</div><div class="label">Social / Commercial / Artistique</div></div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Le point qui compte le plus :</strong> "plus facile d'être référencé et trouvé en ligne si tu es ultra-spécifique — un spécialiste facture toujours plus qu'un généraliste." La forte densité de micro-entrepreneurs tire les prix vers le bas pour les profils non différenciés.</p>
+    </div>
+
+    <h3>Ce que ça change pour Serah</h3>
+    <p>Le book actuel (voyage, lifestyle, famille, architecture, documentaire) est une force de style — pas un handicap — à condition que le site l'assume comme <em>une voix</em> plutôt que comme 5 catégories décousues. Portrait, mariage et produit peuvent rester au menu, présentés comme des extensions de ce regard plutôt que des services génériques.</p>
+
+    <h3>Tendances design 2026 à retenir</h3>
+    <ul class="trend-list">
+      <li><span class="tag">Couleur</span><p>Le dark mode évolue au-delà du noir pur : bleu nuit, violet profond, vert course — effet "pierre précieuse". Une autre voie, plus éditoriale : un noir neutre qui reste sobre, et laisser chaque série de photos apporter sa propre couleur.</p></li>
+      <li><span class="tag">Mise en page</span><p>Grilles minimalistes, grandes images, texte en surimpression léger — le design sert la photo, jamais l'inverse.</p></li>
+      <li><span class="tag">Technique</span><p>Mobile-first non négociable ; Core Web Vitals (LCP/CLS/INP) pèsent sur le référencement ; WebP + lazy loading pour des galeries lourdes en images.</p></li>
+      <li><span class="tag">Commerce</span><p>Regain d'intérêt pour les tirages/albums physiques — une boutique n'est pas urgente mais vaut d'être prévue en v2.</p></li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <div class="section-head"><span class="section-num">02</span><h2>Stratégie du site</h2></div>
+    <p class="lede">Un site vitrine, statique, rapide, pensé mobile d'abord — avec une porte d'entrée unique et des univers filtrables plutôt que quatre sites déguisés en un.</p>
+
+    <h3>Plan du site</h3>
+    <div class="sitemap">
+      <div class="node l1">Accueil <span class="pill">hero + intro</span></div>
+      <div class="node l2">Image forte, nom, une ligne de positionnement, CTA "Explorer"</div>
+      <div class="node l1">Portfolio <span class="pill">grille filtrable</span></div>
+      <div class="node l2">Voyage &amp; Lifestyle — univers principal, le plus fourni aujourd'hui</div>
+      <div class="node l2">Documentaire / Architecture</div>
+      <div class="node l2">Portrait &amp; Éditorial</div>
+      <div class="node l2">Mariage &amp; Événementiel</div>
+      <div class="node l2">Produit &amp; Commercial</div>
+      <div class="node l1">À propos <span class="pill">confiance</span></div>
+      <div class="node l2">Parcours, matériel, ce qui guide le regard de Serah</div>
+      <div class="node l1">Contact <span class="pill">conversion</span></div>
+      <div class="node l2">Formulaire simple + zone d'intervention + délai de réponse</div>
+    </div>
+
+    <h3>Priorités techniques</h3>
+    <p>HTML/CSS/JS statique, hébergé sur le sous-domaine <code>serah-photos.tracevault.tech</code>. Images en WebP, lazy loading, layout mobile-first. Pas de CMS lourd tant que le volume de contenu reste gérable à la main.</p>
+  </section>
+
+  <section class="block">
+    <div class="section-head"><span class="section-num">03</span><h2>Direction visuelle</h2></div>
+    <p class="lede">Nouvelle piste, à partir de la référence envoyée par Serah — un noir neutre et sobre, une typographie serif italique éditoriale, et une couleur qui n'est jamais fixe : elle change avec chaque série de photos.</p>
+
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#0d0d0f"></div><div class="name">#0d0d0f fond</div></div>
+      <div class="swatch"><div class="chip" style="background:#17171a"></div><div class="name">#17171a surface</div></div>
+      <div class="swatch"><div class="chip" style="background:#f4f2ec"></div><div class="name">#f4f2ec texte</div></div>
+      <div class="swatch"><div class="chip" style="background:#c9a35c"></div><div class="name">#c9a35c liens/CTA</div></div>
+    </div>
+
+    <div class="type-sample">
+      <div class="disp"><em>Golden</em> Days</div>
+      <div class="body-sample">Un titre serif éditorial, mélange romain/italique — comme une légende de magazine. En dessous, un corps de texte sans-serif discret pour les descriptions et l'à-propos.</div>
+      <div class="cap">Nav — About · Works · Casting · Contact</div>
+    </div>
+
+    <div class="hero-mock">
+      <div class="hero-mock__nav"><span class="brand">Serah</span><span>About · Works · Contact</span></div>
+      <div class="hero-mock__portal"></div>
+      <div class="hero-mock__title">entre <span class="it">Réel</span><br><span class="it">&amp;</span> Rêve</div>
+      <div class="hero-mock__cta">Voir la collection →</div>
+    </div>
+    <div class="caption">Gabarit de héros — portrait cadré dans un médaillon circulaire, titre serif à cheval sur l'image, lien texte + flèche plutôt qu'un bouton plein.</div>
+
+    <div class="mood-row">
+      <div class="mood-chip m1"><span>Golden Days</span></div>
+      <div class="mood-chip m2"><span>Forest Story</span></div>
+      <div class="mood-chip m3"><span>Soul Dance</span></div>
+      <div class="mood-chip m4"><span>Push the Envelope</span></div>
+    </div>
+    <div class="caption">Le principe clé : pas de charte couleur fixe. Chaque collection (voyage, portrait, documentaire...) garde la couleur de ses propres photos — la lave d'un volcan, le bleu d'une piscine, la lumière d'une golden hour. Le site reste noir/ivoire ; la couleur vient toujours de l'image, jamais du CSS.</div>
+
+    <h3>Règles à tenir</h3>
+    <ul class="trend-list">
+      <li><span class="tag">Couleur</span><p>Zéro accent de marque fixe. Le bronze utilisé dans ce document n'est qu'un repère de lecture — sur le vrai site, chaque collection impose sa propre teinte via ses photos.</p></li>
+      <li><span class="tag">Typo</span><p>Serif italique éditorial pour les titres de collection (souvent en mêlant romain et italique dans un même titre), sans-serif fine et espacée pour la nav et les labels, sans-serif simple pour le corps de texte.</p></li>
+      <li><span class="tag">Interaction</span><p>Liens texte + flèche ("Voir la collection →") plutôt que des boutons pleins ; le médaillon circulaire comme signature visuelle des pages héros.</p></li>
+    </ul>
+  </section>
+
+  <section class="block" style="margin-bottom:0;">
+    <div class="section-head"><span class="section-num">→</span><h2>Prochaines étapes</h2></div>
+    <div class="next-steps">
+      <ol>
+        <li>Confirmer le plan du site (5 univers proposés en <strong>02</strong>) — on ajuste ou on valide tel quel.</li>
+        <li>Déposer les photos définitives dans le dossier <code>img/</code> (le dossier est vide pour l'instant) — au moins 3-4 par univers pour démarrer.</li>
+        <li>Une fois validé, je code le site statique (HTML/CSS/JS) en reprenant cette direction visuelle, prêt à déployer sur <code>serah-photos.tracevault.tech</code>.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    Sources — <a href="https://www.pixpa.com/blog/photography-trends">Pixpa, Tendances photographiques 2026</a>,
+    <a href="https://elements.envato.com/learn/portfolio-trends">Envato, Portfolio design trends 2026</a>,
+    <a href="https://modelesdebusinessplan.com/blogs/infos/marche-photographie">Modèles de Business Plan, Marché de la photographie 2026</a>,
+    <a href="https://regismoscardini.fr/marche-de-la-photographie-concurrence/">Régis Moscardini, Marché &amp; concurrence</a>
+  </footer>
+
+</div>

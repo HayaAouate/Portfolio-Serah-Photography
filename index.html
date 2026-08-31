@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serah Aouate — Photographies</title>
+  <meta name="description" content="Serah Aouate, photographe. Voyage, famille, architecture, documentaire — un seul regard posé sur cinq terrains.">
+  
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Serah Aouate — Photographies">
+  <meta property="og:description" content="Voyage, famille, architecture, documentaire — un seul regard posé sur cinq terrains.">
+  <meta property="og:image" content="img/web/etna-crete.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main Modular Stylesheet -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav">
+    <a class="nav__mark" href="#top">Serah <span>Aouate</span></a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#regard">Le regard</a>
+      <a href="#series">Séries</a>
+      <a href="#index">Index</a>
+      <a href="#propos">À propos</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Contact</a>
+    <button type="button" class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu">
+      Menu <span class="lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <!-- ============ MENU MOBILE ============ -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+    <button type="button" class="menu__close" id="menuClose">Fermer</button>
+    <a href="#regard">Le regard</a>
+    <a href="#series">Séries</a>
+    <a href="#index">Index</a>
+    <a href="#propos">À propos</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__sticky">
+        <div class="hero__medallion" id="medallion">
+          <img src="img/web/etna-crete.webp"
+               srcset="img/web/etna-crete@600.webp 600w, img/web/etna-crete@1000.webp 1000w, img/web/etna-crete.webp 1200w"
+               sizes="100vw"
+               width="1200" height="1600" fetchpriority="high" decoding="async"
+               alt="Crête volcanique de l’Etna au crépuscule, une silhouette minuscule marche sur l’arête de cendre.">
+          <div class="hero__scrim" id="scrim"></div>
+        </div>
+
+        <div class="hero__act hero__act--1" id="act1">
+          <span class="hero__pre">entre</span>
+          <h1 class="hero__h1 dsp">
+            Le Sel
+            <span class="l2"><span class="amp"><em>&amp;</em></span>La Cendre</span>
+          </h1>
+        </div>
+
+        <div class="hero__act hero__act--2" id="act2" aria-hidden="false">
+          <div class="a2grid wrap" style="padding-inline:0">
+            <h2 class="dsp">Marcher <em>jusqu’au</em><br>bord du cadre.</h2>
+            <div class="a2foot">
+              <p>Etna, octobre. La seule silhouette de l’image tient dans un demi-millimètre&nbsp;: c’est l’échelle qui raconte, pas le sujet.</p>
+              <div>
+                <p class="meta" style="margin:0 0 6px">Etna, Sicile — série 02</p>
+                <a class="arrow-link" href="#serie-02"><span class="bar"></span>Voir la série</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__aside" aria-hidden="true">
+          <span class="v">Scroll</span>
+          <span class="stem"></span>
+        </div>
+        <div class="hero__year dsp" aria-hidden="true">&#10033;2026</div>
+      </div>
+    </section>
+
+    <!-- ============ LE REGARD ============ -->
+    <section class="regard wrap" id="regard">
+      <div class="regard__grid">
+        <div>
+          <p class="meta" style="margin:0 0 18px">01 — Le regard</p>
+          <h2 class="dsp rv">Un seul <em>regard</em>,<br>cinq terrains.</h2>
+        </div>
+        <div class="regard__body">
+          <p class="rv">Je photographie ce qui reste quand on retire l’événement&nbsp;: une lumière sur une façade, une silhouette qui descend vers l’eau, deux enfants de dos au bord d’un bassin.</p>
+          <p class="rv rv-d1">Voyage, famille, architecture, documentaire — ce ne sont pas cinq métiers. C’est une même façon de regarder, posée sur cinq terrains. Le cadre attend, la lumière décide.</p>
+          <p class="rv rv-d2">Chaque série porte sa propre couleur. Le site ne fait que s’effacer devant elle.</p>
+          <ul class="terrains rv rv-d3">
+            <li>Voyage</li><li>Famille</li><li>Architecture</li><li>Documentaire</li><li>Lifestyle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERIES ============ -->
+    <div class="series wrap" id="series">
+
+      <!-- Série 01 -->
+      <article class="serie" id="serie-01" style="--accent:#2E6B7E">
+        <div class="serie__head">
+          <span class="serie__no">Série 01</span>
+          <span class="meta meta--accent">Côte méditerranéenne — 2024 / 2026</span>
+        </div>
+        <div class="serie__grid">
+          <figure class="frame serie__lead rv">
+            <button type="button" class="frame__hit" data-src="img/web/escalier-mer.webp" data-cap="Descente vers la crique — Côte d’Azur">
+              <img src="img/web/escalier-mer.webp" srcset="img/web/escalier-mer@600.webp 600w, img/web/escalier-mer@1000.webp 1000w, img/web/escalier-mer.webp 1200w"
+                   sizes="(max-width:900px) 100vw, 46vw" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Une femme descend un escalier de pierre bordé de rambardes en bois vers une crique rocheuse et une mer turquoise.">
+            </button>
+            <figcaption><span>Descente vers la crique</span><span>Côte d’Azur</span></figcaption>
+          </figure>
+          <div class="serie__body">
+            <h3 class="serie__title dsp rv">Sel <em>&amp;</em><br>Calcaire</h3>
+            <p class="rv rv-d1">La côte se lit à la verticale&nbsp;: un escalier taillé dans le calcaire, une rambarde mangée par le sel, et le bleu qui commence exactement là où la pierre s’arrête.</p>
+            <p class="rv rv-d2">On y revient pour la ligne d’horizon — la seule chose qui ne change jamais de place.</p>
+            <a class="arrow-link rv rv-d3" href="#index"><span class="bar"></span>4 images</a>
+          </div>
+          <div class="serie__cluster">
+            <figure class="frame c1 rv">
+              <button type="button" class="frame__hit" data-src="img/web/ilot.webp" data-cap="Îlot — Grand large">
+                <img src="img/web/ilot.webp" srcset="img/web/ilot@600.webp 600w, img/web/ilot@1000.webp 1000w, img/web/ilot.webp 1600w"
+                     sizes="(max-width:900px) 50vw, 30vw" width="1600" height="1066" loading="lazy" decoding="async"
+                     alt="Un petit îlot rocheux seul sur une mer bleue profonde sous un ciel dégagé.">
+              </button>
+              <figcaption><span>Îlot</span><span>Grand large</span></figcaption>
+            </figure>
+            <figure class="frame c2 rv rv-d1">
+              <button type="button" class="frame__hit" data-src="img/web/baie-des-anges.webp" data-cap="Baie des Anges — Nice">
+                <img src="img/web/baie-des-anges.webp" srcset="img/web/baie-des-anges@600.webp 600w, img/web/baie-des-anges@1000.webp 1000w"
+                     sizes="(max-width:900px) 50vw, 22vw" width="900" height="1600" loading="lazy" decoding="async"
+                     alt="La baie de Nice vue des hauteurs, mer argentée, plage bondée et toits de tuiles sous un ciel nuageux.">
+              </button>
+              <figcaption><span>Baie des Anges</span><span>Nice</span></figcaption>
+            </figure>
+            <figure class="frame c3 rv rv-d2">
+              <button type="button" class="frame__hit" data-src="img/web/port-monaco.webp" data-cap="Port Hercule — Monaco">
+                <img src="img/web/port-monaco.webp" srcset="img/web/port-monaco@600.webp 600w, img/web/port-monaco@1000.webp 1000w"
+                     sizes="(max-width:900px) 100vw, 30vw" width="900" height="1600" loading="lazy" decoding="async"
+                     alt="Le port de Monaco depuis une terrasse, drapeau monégasque au vent et yachts blancs alignés.">
+              </button>
+              <figcaption><span>Port Hercule</span><span>Monaco</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- Série 02 -->
+      <article class="serie serie--duo" id="serie-02" style="--accent:#7A5C41">
+        <div class="serie__head">
+          <span class="serie__no">Série 02</span>
+          <span class="meta meta--accent">Etna, Sicile — 2025</span>
+        </div>
+        <div class="serie__grid">
+          <figure class="frame serie__lead rv">
+            <button type="button" class="frame__hit" data-src="img/web/etna-crete.webp" data-cap="Arête de cendre — Etna">
+              <img src="img/web/etna-crete.webp" srcset="img/web/etna-crete@600.webp 600w, img/web/etna-crete@1000.webp 1000w, img/web/etna-crete.webp 1200w"
+                   sizes="(max-width:900px) 100vw, 54vw" width="1200" height="1600" loading="lazy" decoding="async"
+                   alt="Crête de cendre noire de l’Etna, une marcheuse minuscule sur l’arête, mousses jaunes sur les flancs.">
+            </button>
+            <figcaption><span>Arête de cendre</span><span>Etna</span></figcaption>
+          </figure>
+          <div class="serie__body">
+            <h3 class="serie__title dsp rv">Terre <em>Noire</em></h3>
+            <p class="rv rv-d1">Le sable est noir, la mousse est jaune, et la seule silhouette de l’image tient dans un demi-millimètre. L’échelle fait tout le travail.</p>
+            <p class="rv rv-d2">Rien à mettre en scène&nbsp;: il suffit de marcher assez haut pour que le paysage se charge de la composition.</p>
+            <a class="arrow-link rv rv-d3" href="#index"><span class="bar"></span>2 images</a>
+          </div>
+          <div class="serie__cluster">
+            <figure class="frame c1 rv rv-d1">
+              <button type="button" class="frame__hit" data-src="img/web/etna-crepuscule.webp" data-cap="Route du versant — Etna">
+                <img src="img/web/etna-crepuscule.webp" srcset="img/web/etna-crepuscule@600.webp 600w, img/web/etna-crepuscule@1000.webp 1000w, img/web/etna-crepuscule.webp 1200w"
+                     sizes="(max-width:900px) 100vw, 30vw" width="1200" height="1600" loading="lazy" decoding="async"
+                     alt="Versant de l’Etna au crépuscule, route sinueuse et refuges orange sur la lave noire, ciel rose au loin.">
+              </button>
+              <figcaption><span>Route du versant</span><span>Etna</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- Série 03 -->
+      <article class="serie serie--flip" id="serie-03" style="--accent:#7E5A20">
+        <div class="serie__head">
+          <span class="serie__no">Série 03</span>
+          <span class="meta meta--accent">Vienne, Budapest — 2025</span>
+        </div>
+        <div class="serie__grid">
+          <figure class="frame serie__lead rv">
+            <button type="button" class="frame__hit" data-src="img/web/parlement-nuit.webp" data-cap="Parlement — Budapest">
+              <img src="img/web/parlement-nuit.webp" srcset="img/web/parlement-nuit@600.webp 600w, img/web/parlement-nuit@1000.webp 1000w, img/web/parlement-nuit.webp 1574w"
+                   sizes="(max-width:900px) 100vw, 46vw" width="1600" height="1066" loading="lazy" decoding="async"
+                   alt="Façade néogothique du Parlement de Budapest illuminée en or contre un ciel bleu nuit.">
+            </button>
+            <figcaption><span>Parlement</span><span>Budapest</span></figcaption>
+          </figure>
+          <div class="serie__body">
+            <h3 class="serie__title dsp rv">Or <em>&amp;</em> Nuit</h3>
+            <p class="rv rv-d1">L’architecture ne se donne qu’après la tombée du jour, quand l’éclairage public décide de ce qu’on a le droit de voir.</p>
+            <p class="rv rv-d2">Trois échelles du même or&nbsp;: une façade entière, un angle de rue, un lustre.</p>
+            <a class="arrow-link rv rv-d3" href="#index"><span class="bar"></span>3 images</a>
+          </div>
+          <div class="serie__cluster">
+            <figure class="frame c1 rv">
+              <button type="button" class="frame__hit" data-src="img/web/opera-vienne.webp" data-cap="Staatsoper — Vienne">
+                <img src="img/web/opera-vienne.webp" srcset="img/web/opera-vienne@600.webp 600w, img/web/opera-vienne@1000.webp 1000w, img/web/opera-vienne.webp 1600w"
+                     sizes="(max-width:900px) 50vw, 30vw" width="1600" height="1068" loading="lazy" decoding="async"
+                     alt="L’Opéra de Vienne illuminé la nuit à l’angle d’un boulevard, feux rouges suspendus au premier plan.">
+              </button>
+              <figcaption><span>Staatsoper</span><span>Vienne</span></figcaption>
+            </figure>
+            <figure class="frame c3 rv rv-d1">
+              <button type="button" class="frame__hit" data-src="img/web/lustre.webp" data-cap="Lustre — Salon d’apparat">
+                <img src="img/web/lustre.webp" srcset="img/web/lustre@600.webp 600w, img/web/lustre@1000.webp 1000w, img/web/lustre.webp 1600w"
+                     sizes="(max-width:900px) 100vw, 30vw" width="1600" height="1252" loading="lazy" decoding="async"
+                     alt="Grand lustre de cristal allumé sous un plafond à moulures dorées dans un salon d’apparat.">
+              </button>
+              <figcaption><span>Lustre</span><span>Salon d’apparat</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- Série 04 -->
+      <article class="serie" id="serie-04" style="--accent:#4F5C41">
+        <div class="serie__head">
+          <span class="serie__no">Série 04</span>
+          <span class="meta meta--accent">France, Autriche, Italie</span>
+        </div>
+        <div class="serie__grid">
+          <figure class="frame serie__lead rv">
+            <button type="button" class="frame__hit" data-src="img/web/bassin-aout.webp" data-cap="Brassards — Août">
+              <img src="img/web/bassin-aout.webp" srcset="img/web/bassin-aout@600.webp 600w, img/web/bassin-aout@1000.webp 1000w, img/web/bassin-aout.webp 1600w"
+                   sizes="(max-width:900px) 100vw, 46vw" width="1600" height="1066" loading="lazy" decoding="async"
+                   alt="Deux petites filles de dos, assises au bord d’une piscine, brassards roses et maillots à rayures.">
+            </button>
+            <figcaption><span>Brassards</span><span>Août</span></figcaption>
+          </figure>
+          <div class="serie__body">
+            <h3 class="serie__title dsp rv">Jours <em>Ordinaires</em></h3>
+            <p class="rv rv-d1">Les images qui ne cherchent rien. Deux dos en brassards, un mur de livres, une grande roue contre un ciel de mai.</p>
+            <p class="rv rv-d2">C’est souvent celles-là qui restent.</p>
+            <a class="arrow-link rv rv-d3" href="#index"><span class="bar"></span>4 images</a>
+          </div>
+          <div class="serie__cluster">
+            <figure class="frame c1 rv">
+              <button type="button" class="frame__hit" data-src="img/web/librairie.webp" data-cap="Mur de livres — Italie">
+                <img src="img/web/librairie.webp" srcset="img/web/librairie@600.webp 600w, img/web/librairie@1000.webp 1000w, img/web/librairie.webp 1200w"
+                     sizes="(max-width:900px) 50vw, 30vw" width="1200" height="1600" loading="lazy" decoding="async"
+                     alt="Mur de librairie du sol au plafond, étagères de bois éclairées par des LED, rue visible par la porte vitrée.">
+              </button>
+              <figcaption><span>Mur de livres</span><span>Italie</span></figcaption>
+            </figure>
+            <figure class="frame c2 rv rv-d1">
+              <button type="button" class="frame__hit" data-src="img/web/prater-roue.webp" data-cap="Riesenrad — Prater, Vienne">
+                <img src="img/web/prater-roue.webp" srcset="img/web/prater-roue@600.webp 600w, img/web/prater-roue@1000.webp 1000w, img/web/prater-roue.webp 1600w"
+                     sizes="(max-width:900px) 50vw, 22vw" width="1600" height="1068" loading="lazy" decoding="async"
+                     alt="La grande roue historique du Prater de Vienne, nacelles rouges, ciel bleu et pavillon vert.">
+              </button>
+              <figcaption><span>Riesenrad</span><span>Prater</span></figcaption>
+            </figure>
+            <figure class="frame c3 rv rv-d2">
+              <button type="button" class="frame__hit" data-src="img/web/prater-karussell.webp" data-cap="Karussell — Prater, Vienne">
+                <img src="img/web/prater-karussell.webp" srcset="img/web/prater-karussell@600.webp 600w, img/web/prater-karussell@1000.webp 1000w, img/web/prater-karussell.webp 1600w"
+                     sizes="(max-width:900px) 100vw, 30vw" width="1600" height="1068" loading="lazy" decoding="async"
+                     alt="Grande roue blanche du Prater sous un ciel de nuages, enseignes de fête foraine au premier plan.">
+              </button>
+              <figcaption><span>Karussell</span><span>Prater</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ============ INDEX FILTRABLE ============ -->
+    <section class="index wrap" id="index">
+      <div class="index__head">
+        <div>
+          <p class="meta" style="margin:0 0 14px">02 — Index</p>
+          <h2 class="dsp">Toutes les images</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrer les images par terrain">
+          <button type="button" data-filter="tout" aria-pressed="true">Tout</button>
+          <button type="button" data-filter="voyage" aria-pressed="false">Voyage</button>
+          <button type="button" data-filter="archi" aria-pressed="false">Architecture</button>
+          <button type="button" data-filter="doc" aria-pressed="false">Documentaire</button>
+          <button type="button" data-filter="famille" aria-pressed="false">Famille</button>
+        </div>
+      </div>
+
+      <div class="masonry" id="masonry">
+
+        <figure class="frame rv" data-tags="voyage doc">
+          <button type="button" class="frame__hit" data-src="img/web/etna-crete.webp" data-cap="Arête de cendre — Etna">
+            <img src="img/web/etna-crete@1000.webp" srcset="img/web/etna-crete@600.webp 600w, img/web/etna-crete@1000.webp 1000w, img/web/etna-crete.webp 1200w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="Crête de cendre noire de l’Etna, une marcheuse minuscule sur l’arête."></button>
+          <figcaption><span>Arête de cendre</span><span>Etna</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage archi">
+          <button type="button" class="frame__hit" data-src="img/web/baie-des-anges.webp" data-cap="Baie des Anges — Nice">
+            <img src="img/web/baie-des-anges@1000.webp" srcset="img/web/baie-des-anges@600.webp 600w, img/web/baie-des-anges@1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="900" height="1600" loading="lazy" decoding="async"
+                 alt="La baie de Nice vue des hauteurs, mer argentée et toits de tuiles."></button>
+          <figcaption><span>Baie des Anges</span><span>Nice</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="archi">
+          <button type="button" class="frame__hit" data-src="img/web/parlement-nuit.webp" data-cap="Parlement — Budapest">
+            <img src="img/web/parlement-nuit@1000.webp" srcset="img/web/parlement-nuit@600.webp 600w, img/web/parlement-nuit@1000.webp 1000w, img/web/parlement-nuit.webp 1574w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1066" loading="lazy" decoding="async"
+                 alt="Façade du Parlement de Budapest illuminée en or la nuit."></button>
+          <figcaption><span>Parlement</span><span>Budapest</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage">
+          <button type="button" class="frame__hit" data-src="img/web/escalier-mer.webp" data-cap="Descente vers la crique — Côte d’Azur">
+            <img src="img/web/escalier-mer@1000.webp" srcset="img/web/escalier-mer@600.webp 600w, img/web/escalier-mer@1000.webp 1000w, img/web/escalier-mer.webp 1200w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="Une femme descend un escalier de pierre vers une crique rocheuse."></button>
+          <figcaption><span>Descente vers la crique</span><span>Côte d’Azur</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="famille">
+          <button type="button" class="frame__hit" data-src="img/web/bassin-aout.webp" data-cap="Brassards — Août">
+            <img src="img/web/bassin-aout@1000.webp" srcset="img/web/bassin-aout@600.webp 600w, img/web/bassin-aout@1000.webp 1000w, img/web/bassin-aout.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1066" loading="lazy" decoding="async"
+                 alt="Deux petites filles de dos au bord d’une piscine, brassards roses."></button>
+          <figcaption><span>Brassards</span><span>Août</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="archi">
+          <button type="button" class="frame__hit" data-src="img/web/opera-vienne.webp" data-cap="Staatsoper — Vienne">
+            <img src="img/web/opera-vienne@1000.webp" srcset="img/web/opera-vienne@600.webp 600w, img/web/opera-vienne@1000.webp 1000w, img/web/opera-vienne.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1068" loading="lazy" decoding="async"
+                 alt="L’Opéra de Vienne illuminé la nuit à l’angle d’un boulevard."></button>
+          <figcaption><span>Staatsoper</span><span>Vienne</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage">
+          <button type="button" class="frame__hit" data-src="img/web/ilot.webp" data-cap="Îlot — Grand large">
+            <img src="img/web/ilot@1000.webp" srcset="img/web/ilot@600.webp 600w, img/web/ilot@1000.webp 1000w, img/web/ilot.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1066" loading="lazy" decoding="async"
+                 alt="Un petit îlot rocheux seul sur une mer bleue profonde."></button>
+          <figcaption><span>Îlot</span><span>Grand large</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="doc archi">
+          <button type="button" class="frame__hit" data-src="img/web/librairie.webp" data-cap="Mur de livres — Italie">
+            <img src="img/web/librairie@1000.webp" srcset="img/web/librairie@600.webp 600w, img/web/librairie@1000.webp 1000w, img/web/librairie.webp 1200w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="Mur de librairie du sol au plafond, étagères éclairées."></button>
+          <figcaption><span>Mur de livres</span><span>Italie</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage doc">
+          <button type="button" class="frame__hit" data-src="img/web/etna-crepuscule.webp" data-cap="Route du versant — Etna">
+            <img src="img/web/etna-crepuscule@1000.webp" srcset="img/web/etna-crepuscule@600.webp 600w, img/web/etna-crepuscule@1000.webp 1000w, img/web/etna-crepuscule.webp 1200w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="Versant de l’Etna au crépuscule, route sinueuse sur la lave noire."></button>
+          <figcaption><span>Route du versant</span><span>Etna</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage famille">
+          <button type="button" class="frame__hit" data-src="img/web/prater-roue.webp" data-cap="Riesenrad — Prater, Vienne">
+            <img src="img/web/prater-roue@1000.webp" srcset="img/web/prater-roue@600.webp 600w, img/web/prater-roue@1000.webp 1000w, img/web/prater-roue.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1068" loading="lazy" decoding="async"
+                 alt="La grande roue historique du Prater de Vienne, nacelles rouges."></button>
+          <figcaption><span>Riesenrad</span><span>Prater</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="archi doc">
+          <button type="button" class="frame__hit" data-src="img/web/lustre.webp" data-cap="Lustre — Salon d’apparat">
+            <img src="img/web/lustre@1000.webp" srcset="img/web/lustre@600.webp 600w, img/web/lustre@1000.webp 1000w, img/web/lustre.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1252" loading="lazy" decoding="async"
+                 alt="Grand lustre de cristal allumé sous un plafond à moulures dorées."></button>
+          <figcaption><span>Lustre</span><span>Salon d’apparat</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage archi">
+          <button type="button" class="frame__hit" data-src="img/web/port-monaco.webp" data-cap="Port Hercule — Monaco">
+            <img src="img/web/port-monaco@1000.webp" srcset="img/web/port-monaco@600.webp 600w, img/web/port-monaco@1000.webp 1000w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="900" height="1600" loading="lazy" decoding="async"
+                 alt="Le port de Monaco depuis une terrasse, drapeau au vent et yachts alignés."></button>
+          <figcaption><span>Port Hercule</span><span>Monaco</span></figcaption>
+        </figure>
+
+        <figure class="frame rv" data-tags="voyage famille">
+          <button type="button" class="frame__hit" data-src="img/web/prater-karussell.webp" data-cap="Karussell — Prater, Vienne">
+            <img src="img/web/prater-karussell@1000.webp" srcset="img/web/prater-karussell@600.webp 600w, img/web/prater-karussell@1000.webp 1000w, img/web/prater-karussell.webp 1600w" sizes="(max-width:560px) 100vw, (max-width:900px) 50vw, 33vw" width="1600" height="1068" loading="lazy" decoding="async"
+                 alt="Grande roue blanche du Prater sous un ciel de nuages, fête foraine."></button>
+          <figcaption><span>Karussell</span><span>Prater</span></figcaption>
+        </figure>
+
+      </div>
+      <p class="meta" id="filter-status" role="status" style="margin-top:26px">13 images</p>
+    </section>
+
+    <!-- ============ A PROPOS ============ -->
+    <section class="propos wrap" id="propos">
+      <div class="propos__grid">
+        <div>
+          <p class="meta" style="margin:0 0 18px">03 — À propos</p>
+          <h2 class="dsp rv">Serah <em>Aouate</em></h2>
+          <p class="rv rv-d1">Un boîtier, la lumière disponible, et l’habitude de marcher un peu plus loin que prévu.</p>
+          <p class="rv rv-d2">Je travaille en lumière naturelle, sans mise en scène lourde — aussi bien pour une famille que pour un lieu. Les images de ce site ont été faites entre la Méditerranée, la Sicile et l’Europe centrale.</p>
+          <dl class="specs rv rv-d3">
+            <div><dt>Terrains</dt><dd>Voyage, famille, architecture, documentaire</dd></div>
+            <div><dt>Approche</dt><dd>Lumière naturelle, cadrage large, retouche minimale</dd></div>
+            <div><dt>Sur demande</dt><dd>Portrait, mariage, éditorial, produit</dd></div>
+          </dl>
+        </div>
+        <figure class="frame rv rv-d1">
+          <button type="button" class="frame__hit" data-src="img/web/etna-crepuscule.webp" data-cap="Route du versant — Etna">
+            <img src="img/web/etna-crepuscule.webp" srcset="img/web/etna-crepuscule@600.webp 600w, img/web/etna-crepuscule@1000.webp 1000w, img/web/etna-crepuscule.webp 1200w"
+                 sizes="(max-width:860px) 100vw, 48vw" width="1200" height="1600" loading="lazy" decoding="async"
+                 alt="Versant de l’Etna au crépuscule, ciel rose au-dessus de la lave noire."></button>
+          <figcaption><span>Route du versant</span><span>Etna</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="meta" style="margin:0 0 20px">04 — Contact</p>
+        <h2 class="dsp rv">Écrivons-<em>nous</em>.</h2>
+        <p class="contact__lead rv rv-d1">
+          Dites-moi le lieu, la date approximative et ce que vous avez en tête.
+          Je réponds à chaque demande, même quand je ne suis pas disponible.
+        </p>
+        <button type="button" class="btn rv rv-d1" data-contact-open>
+          Me contacter <span class="bar" aria-hidden="true"></span>
+        </button>
+        <dl class="contact__cols rv rv-d2">
+          <div><dt>Réponse</dt><dd>Sous 48&nbsp;heures</dd></div>
+          <div><dt>Zone d’intervention</dt><dd>PACA, et partout où le billet est pris</dd></div>
+          <div><dt>Devis</dt><dd>Sur brief — à la demi-journée ou à la série</dd></div>
+          <div><dt>Ailleurs</dt><dd><a href="#" style="color:var(--matcha-ink)">Instagram</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <span class="meta">&copy; 2026 Serah Aouate</span>
+      <span class="meta">Toutes les images sont protégées</span>
+    </div>
+  </footer>
+
+  <!-- ============ FENÊTRE DE CONTACT ============ -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+    <div class="modal__panel">
+      <button type="button" class="modal__close" id="cmClose" aria-label="Fermer le formulaire">Fermer</button>
+      <h2 class="dsp" id="cmTitle">Parlons de votre <em>projet</em></h2>
+      <p class="modal__intro">Quelques lignes suffisent. Réponse sous 48&nbsp;heures.</p>
+
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row2">
+          <div class="field">
+            <label for="cfNom">Votre nom <span class="req" aria-hidden="true">*</span></label>
+            <input id="cfNom" name="nom" type="text" autocomplete="name" required aria-describedby="cfNomErr">
+            <p class="err" id="cfNomErr" hidden></p>
+          </div>
+          <div class="field">
+            <label for="cfMail">Votre e-mail <span class="req" aria-hidden="true">*</span></label>
+            <input id="cfMail" name="email" type="email" autocomplete="email" required aria-describedby="cfMailErr">
+            <p class="err" id="cfMailErr" hidden></p>
+          </div>
+        </div>
+
+        <div class="form__row2">
+          <div class="field">
+            <label for="cfType">Type de shooting <span class="req" aria-hidden="true">*</span></label>
+            <select id="cfType" name="type" required aria-describedby="cfTypeErr">
+              <option value="">Choisir…</option>
+              <option>Famille &amp; enfants</option>
+              <option>Voyage &amp; reportage</option>
+              <option>Architecture &amp; lieux</option>
+              <option>Portrait &amp; éditorial</option>
+              <option>Mariage &amp; événement</option>
+              <option>Produit &amp; commercial</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+            <p class="err" id="cfTypeErr" hidden></p>
+          </div>
+          <div class="field">
+            <label for="cfQuand">Date ou période</label>
+            <input id="cfQuand" name="quand" type="text" placeholder="Courant juin, un week-end…">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cfMsg">Votre message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="cfMsg" name="message" required aria-describedby="cfMsgErr"
+                    placeholder="Quel shooting peut-on vous aider à préparer ? Lieu, nombre de personnes, usage des photos…"></textarea>
+          <p class="err" id="cfMsgErr" hidden></p>
+        </div>
+
+        <p class="form__status" id="cfStatus" role="status" hidden></p>
+
+        <div class="form__foot">
+          <p class="form__note">Vos coordonnées servent uniquement à vous répondre.</p>
+          <button type="submit" class="btn" id="cfSend">
+            Envoyer la demande <span class="bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ LIGHTBOX ACCESSIBLE ============ -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image en grand">
+    <button type="button" class="lb__btn lb__close" id="lbClose" aria-label="Fermer">&#10005;</button>
+    <button type="button" class="lb__btn lb__prev" id="lbPrev" aria-label="Image précédente">&#8249;</button>
+    <button type="button" class="lb__btn lb__next" id="lbNext" aria-label="Image suivante">&#8250;</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption class="lb__cap" id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Main ES Module Bootstrap -->
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

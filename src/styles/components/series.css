@@ -1,0 +1,198 @@
+/**
+ * Series Component & Editorial Layouts
+ */
+
+/* Section "Le Regard" */
+.regard {
+  padding-block: clamp(88px, 15vh, 180px) clamp(70px, 11vh, 140px);
+}
+
+.regard__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: clamp(28px, 6vw, 96px);
+  align-items: start;
+}
+
+.regard h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5.4vw, 4.4rem);
+}
+
+.regard h2 em {
+  color: var(--matcha-ink);
+}
+
+.regard__body p {
+  margin: 0 0 22px;
+  font-size: clamp(16px, 1.35vw, 19px);
+  max-width: 56ch;
+  color: var(--ink-2);
+}
+
+.regard__body p:first-child {
+  color: var(--ink);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.6;
+}
+
+.terrains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 34px;
+  padding: 0;
+  list-style: none;
+}
+
+.terrains li {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--matcha-ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 15px;
+  background: var(--paper-2);
+}
+
+@media (max-width: 860px) {
+  .regard__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Series Section */
+.series {
+  padding-bottom: clamp(60px, 9vh, 120px);
+}
+
+.serie {
+  padding: clamp(60px, 10vh, 130px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.serie__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: clamp(28px, 5vh, 60px);
+}
+
+.serie__no {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--ink-3);
+}
+
+.serie__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(12px, 1.6vw, 26px);
+  align-items: end;
+}
+
+.serie__lead {
+  grid-column: 1 / span 6;
+  margin: 0;
+}
+
+.serie__body {
+  grid-column: 8 / span 5;
+  padding-bottom: clamp(6px, 2vh, 26px);
+}
+
+.serie--flip .serie__lead {
+  grid-column: 7 / span 6;
+  order: 2;
+}
+
+.serie--flip .serie__body {
+  grid-column: 1 / span 5;
+  order: 1;
+}
+
+.serie__title {
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 6.2vw, 5.2rem);
+  color: var(--ink);
+}
+
+.serie__title em {
+  color: var(--accent);
+}
+
+.serie__body p {
+  margin: 20px 0 0;
+  color: var(--ink-2);
+  max-width: 44ch;
+  font-size: 15.5px;
+}
+
+.serie__cluster {
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(12px, 1.6vw, 26px);
+  align-items: start;
+  margin-top: clamp(16px, 3vw, 40px);
+}
+
+.serie__cluster .c1 {
+  grid-column: 1 / span 4;
+}
+
+.serie__cluster .c2 {
+  grid-column: 5 / span 3;
+  margin-top: clamp(24px, 6vw, 84px);
+}
+
+.serie__cluster .c3 {
+  grid-column: 9 / span 4;
+}
+
+.serie--duo .serie__lead {
+  grid-column: 1 / span 7;
+}
+
+.serie--duo .serie__body {
+  grid-column: 9 / span 4;
+}
+
+.serie--duo .serie__cluster .c1 {
+  grid-column: 5 / span 4;
+  margin-top: clamp(16px, 3vw, 44px);
+}
+
+@media (max-width: 900px) {
+  .serie__lead,
+  .serie--flip .serie__lead,
+  .serie--duo .serie__lead {
+    grid-column: 1 / span 12;
+    order: 0;
+  }
+  .serie__body,
+  .serie--flip .serie__body,
+  .serie--duo .serie__body {
+    grid-column: 1 / span 12;
+    order: 1;
+  }
+  .serie__cluster .c1 {
+    grid-column: 1 / span 6;
+  }
+  .serie__cluster .c2 {
+    grid-column: 7 / span 6;
+    margin-top: 0;
+  }
+  .serie__cluster .c3 {
+    grid-column: 1 / span 12;
+  }
+  .serie--duo .serie__cluster .c1 {
+    grid-column: 1 / span 12;
+    margin-top: 0;
+  }
+}

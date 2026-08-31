@@ -1,0 +1,47 @@
+/**
+ * Design Tokens — Serah Aouate Portfolio
+ * Palette chromatique, typographie, espacements et courbes de bézier
+ */
+
+:root {
+  /* Chromatique : Papiers & Fonds */
+  --paper: #F2F0E9;
+  --paper-2: #E9E5DA;
+  --paper-3: #DFDACB;
+
+  /* Chromatique : Encres & Contrastes */
+  --ink: #1C201A;
+  --ink-2: #4A5044;
+  --ink-3: #7B8073;
+
+  /* Chromatique : Accents Matcha & Terres */
+  --matcha: #6E7F5B;
+  --matcha-ink: #4F5C41;
+  --line: #D5D0C0;
+  --accent: #4F5C41;
+
+  /* Chromatique : signalement (erreurs de formulaire) — 7,3:1 sur --paper */
+  --danger: #8C3A2B;
+
+  /* Typographie */
+  --font-display: "Instrument Serif", "Big Caslon", "Bodoni MT", Didot, Georgia, ui-serif, serif;
+  --font-sans: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* Layout & Espacements */
+  --gut: clamp(20px, 5vw, 64px);
+  --max-width: 1440px;
+
+  /* Transitions & Animations */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --transition-fast: 0.3s var(--ease);
+  --transition-normal: 0.5s var(--ease);
+  --transition-slow: 1s var(--ease);
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-sticky: 10;
+  --z-nav: 60;
+  --z-menu: 70;
+  --z-modal: 100;
+}

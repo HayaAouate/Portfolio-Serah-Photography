@@ -1,0 +1,79 @@
+/**
+ * Lightbox Modal Component
+ */
+
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+  background: rgba(18, 21, 16, .94);
+  place-items: center;
+  padding: clamp(16px, 4vw, 54px);
+}
+
+.lb.is-on {
+  display: grid;
+}
+
+.lb figure {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+}
+
+.lb img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 30px 80px -40px #000;
+}
+
+.lb__cap {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(242, 240, 233, .66);
+  text-align: center;
+}
+
+.lb__btn {
+  position: absolute;
+  background: transparent;
+  border: 1px solid rgba(242, 240, 233, .32);
+  color: #F2F0E9;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  line-height: 1;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lb__btn:hover {
+  background: rgba(242, 240, 233, .14);
+  border-color: rgba(242, 240, 233, .6);
+}
+
+.lb__close {
+  top: clamp(14px, 3vw, 30px);
+  right: clamp(14px, 3vw, 30px);
+}
+
+.lb__prev {
+  left: clamp(10px, 2.4vw, 28px);
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.lb__next {
+  right: clamp(10px, 2.4vw, 28px);
+  top: 50%;
+  translate: 0 -50%;
+}

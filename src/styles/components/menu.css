@@ -1,0 +1,60 @@
+/**
+ * Mobile Menu Component
+ */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-menu);
+  display: none;
+  background: var(--paper);
+  padding: var(--gut);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu.is-on {
+  display: flex;
+}
+
+.menu a {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 11vw, 3.6rem);
+  line-height: 1.18;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  transition: color var(--transition-fast);
+}
+
+.menu a:hover {
+  color: var(--matcha-ink);
+}
+
+.menu a:last-of-type {
+  border-bottom: 0;
+  color: var(--matcha-ink);
+  font-style: italic;
+}
+
+.menu__close {
+  position: absolute;
+  top: 12px;
+  right: var(--gut);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  min-height: 44px;
+  padding: 0 2px;
+  transition: color var(--transition-fast);
+}
+
+.menu__close:hover {
+  color: var(--ink);
+}

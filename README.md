@@ -84,4 +84,3 @@ npm run preview
 - **WAI-ARIA** : Prise en charge des attributs `aria-expanded`, `aria-pressed`, `aria-modal`, `role="dialog"`, `role="status"`.
 - **Navigation Clavier** : Support complet des touches `Escape`, `Flèche Gauche`, `Flèche Droite` dans la lightbox et le menu.
 - **Performances d'affichage** : `fetchpriority="high"` sur le LCP, `loading="lazy"` et `decoding="async"` sur les galeries, formats WebP avec `srcset` responsive.
-# Portfolio-Serah-Photography
