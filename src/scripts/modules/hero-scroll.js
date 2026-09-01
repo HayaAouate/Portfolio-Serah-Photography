@@ -55,24 +55,11 @@ export class HeroScroll {
     const h = this.med.offsetHeight;
     if (!w || !h) return;
 
+    // Le medaillon couvre tout le viewport en fin de course (choix assume :
+    // l'effet plein ecran prime). La nettete depend donc de la resolution
+    // source : voir le srcset de #medallion dans index.html.
     const vp = HeroScroll.viewport();
-    let target = Math.max(vp.w / w, vp.h / h) * 1.04;
-
-    // Bridage : ne jamais agrandir la photo au-dela de ses pixels reels.
-    // Le medaillon est carre et en object-fit:cover, donc le nombre de pixels
-    // source disponibles sur sa largeur est le petit cote de l'image.
-    // DPR plafonne a 2 : au-dela, personne ne compte les pixels d'un hero.
-    //   sources basse def  -> le zoom s'arrete en grande plaque centree
-    //   sources haute def  -> maxScale depasse la couverture, plein ecran
-    const srcPx = this.medImg
-      ? Math.min(this.medImg.naturalWidth, this.medImg.naturalHeight)
-      : 0;
-    if (srcPx > 0) {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      target = Math.min(target, Math.max(srcPx / (w * dpr), 1.05));
-    }
-
-    this.target = target;
+    this.target = Math.max(vp.w / w, vp.h / h) * 1.04;
   }
 
   render() {
