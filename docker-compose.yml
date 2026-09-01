@@ -13,8 +13,9 @@ services:
     expose:
       - "3004"          # visible par Caddy sur le réseau, pas publié sur l'hôte
     networks:
-      - publication_network
+      - app-network
 
 networks:
-  publication_network:
+  app-network:
+    name: publication_network
     external: true
