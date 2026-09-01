@@ -13,8 +13,8 @@ services:
     expose:
       - "3004"          # visible par Caddy sur le réseau, pas publié sur l'hôte
     networks:
-      - web
+      - publication_network
 
 networks:
-  web:
-    external: true      # remplacer "web" par le réseau réel de Caddy
+  publication_network:
+    external: true
